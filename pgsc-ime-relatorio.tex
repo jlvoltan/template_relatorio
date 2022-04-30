@@ -1,0 +1,94 @@
+% ---------------------------------------------------------------------------------------------------------------
+% TEMPLATE PARA TRABALHO DE CONCLUSÃO DE CURSO
+
+
+
+% A ideia de criar este template veio da necessidade de um relatório de uma disciplina.
+% Como já havia tido contato com o template utilizado no curso de pós-graduação em ciência de dados da UTFPR, Dois Vizinhos - PR, e o achava de alta qualidade, bem explicado e estruturado, tive a ideia de utilizá-lo como base e montar, através de adaptações um voltado para modelo de relatório de disciplina do Programa de Pós-Graduação em Sistemas e Computação (PGSC) do IME. 
+
+% ESSE TEMPLATE NÃO CONSTITUI UM MODELO DA INSTITUIÇÃO, é apenas um template que resolvi criar através de adaptações com a finalidade de suprir uma necessidade pessoal.
+
+% José Luiz N. Voltan - Aluno PGSC/IME
+
+
+% Dessa forma, dando crédito a quem merece o crédito, destaco que o template original foi desenvolvido pelas seguintes pessoas:
+
+% Universidade Tecnológica Federal do Paraná - UTFPR
+% Curso de Licenciatura em Informática
+% Francisco Beltrão - PR
+% Customização da classe abnTeX2 (http://www.abntex.net.br/) para as normas da UTFPR
+% Autor: Adair Rohling
+% Adaptações: Paulo Jr. Varela e Anderson C. Carniel
+
+
+
+% utilizei como base a versão  v. 2.2   (01/12/2021) do referido template , ele encontra-se disponível em https://www.overleaf.com/read/vgqbvmnmfppd
+
+
+
+%----------------------------------------------------------------------------------------------------------------
+% Codificação: UTF-8
+% LaTeX:  abnTeX2          
+% ---------------------------------------------------------------------------------------------------------------
+
+% CARREGA CLASSE PERSONALIZADA--------------------------------------------------------------------------
+\RequirePackage{scrlfile}
+\AfterClass{memoir}{\usepackage[a-3b]{pdfx}} %v.3
+
+\documentclass[%twoside,                   % Impressão em frente e verso
+    	        oneside,                   % Impressão apenas frente
+]{configuracoes/pgsc-abntex2}
+
+
+% INCLUI ARQUIVOS DE CONFIGURAÇÕES-------------------------------------------------------------------------------
+\include{configuracoes/pacotes}
+\include{configuracoes/configuracoes-pdf}
+
+% INCLUI ARQUIVOS DO TRABALHO DE CONCLUSÃO DE CURSO (PRÉ-TEXTUAIS, TEXTUAIS, PÓS-TEXTUAIS)-----------------------
+
+% INSERE CAPA E FOLHA DE ROSTO
+\include{estrutura/pre-textuais/capa}
+\include{estrutura/pre-textuais/folha-rosto}
+
+\begin{document}
+
+\pretextual
+\imprimircapa                                               	          
+\imprimirfolhaderosto{ }   
+           
+% INSERE ELEMENTOS PRÉ-TEXTUAIS
+%\include{estrutura/pre-textuais/dedicatoria}          			   % Dedicatória
+%\include{estrutura/pre-textuais/agradecimentos}        			   % Agradecimentos
+%\include{estrutura/pre-textuais/epigrafe}              			   % Epígrafe
+\include{estrutura/pre-textuais/resumo}             			   % Resumo em Português
+%\include{estrutura/pre-textuais/abstract}             		           % Resumo em Inglês
+%\include{estrutura/pre-textuais/listas/listas-ilustracoes/lista-figuras}   % Lista de Figuras
+%\include{estrutura/pre-textuais/listas/listas-ilustracoes/lista-quadros}   % Lista de Quadros
+%\include{estrutura/pre-textuais/listas/lista-tabelas}         		   % Lista de Tabelas
+%\include{estrutura/pre-textuais/listas/lista-siglas}          		   % Lista de Abreviaturas e Siglas
+%\include{estrutura/pre-textuais/listas/lista-simbolos}        		   % Lista de Símbolos
+%\include{estrutura/pre-textuais/listas/listas-diversas/lista-algoritmos}   % Lista de Algoritmos
+\include{estrutura/pre-textuais/sumario}               			   % Sumário
+
+\textual
+% INSERE ELEMENTOS TEXTUAIS
+\include{estrutura/textuais/introducao}                		           % Introdução
+\include{estrutura/textuais/desenvolvimento/revisao-de-literatura}         % Revisão de Literatura
+\include{estrutura/textuais/desenvolvimento/metodologia}                   % Metodologia
+\include{estrutura/textuais/desenvolvimento/resultados}                    % Resultados
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lembre de comentar o item a seguir
+\include{estrutura/textuais/desenvolvimento/orientacoes}                   % Capítulo com Orientações de uso do Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\include{estrutura/textuais/conclusao}                 			   % Conclusão
+
+\postextual
+% INSERE ELEMENTOS PÓS-TEXTUAIS
+\include{estrutura/pos-textuais/referencias}           			   % Referências
+
+
+\end{document}
